@@ -43,21 +43,32 @@ necessary:
 The server is stopped by hitting ``Ctrl-C`` twice from the terminal, or by
 killing the corresponding OS process.
 
-Build an Odoo module
-====================
+通过在终端中按两次 ``Ctrl-C`` 终止服务，或者通过杀死服务相应的的系统进程也可以终止。
+
+Build an Odoo module     创建一个 Odoo 模块
+========================================
 
 Both server and client extensions are packaged as *modules* which are
 optionally loaded in a *database*.
+
+无论是服务器扩展还是客户端扩展都被包装为 *模块* ， *模块* 可选择装载到 *数据库* 中。
 
 Odoo modules can either add brand new business logic to an Odoo system, or
 alter and extend existing business logic: a module can be created to add your
 country's accounting rules to Odoo's generic accounting support, while the
 next module adds support for real-time visualisation of a bus fleet.
 
+Odoo 模块既可以添加从全新的业务逻辑到 Odoo 系统中, 或者
+改变和扩展现存的业务逻辑：例如可以为 Odoo 一般的会计支持添加适用于某个国家的会计准则的模块，
+也可以为实时可视化车队管理添加一个支持模块。
+
+
 Everything in Odoo thus starts and ends with modules.
 
-Composition of a module
------------------------
+Odoo 中一切均以模块开始以模块结束。
+
+Composition of a module  模块的构成
+----------------------------------------------
 
 An Odoo module can contain a number of elements:
 
@@ -74,6 +85,23 @@ Web controllers
 
 Static web data
     Images, CSS or javascript files used by the web interface or website
+
+Odoo 的模块包含下面一些元素：
+
+业务对象
+    以 Python 类来声明, 这些资源基于其设置
+    由 Odoo 自动持久化
+
+数据文件
+    XML 或者 CSV 文件，用以声明元数据（视图或报表）, 设置
+    数据（模块的参数）, 演示数据及其他数据
+
+网络控制器
+    处理来自网络浏览器的请求
+
+静态网络数据
+    由网络接口或网站所使用的图像， CSS 或者 javascript 文件。
+
 
 Module structure
 ----------------
